@@ -16,6 +16,49 @@
         .project-card { background: #000; border-left: 5px solid #ff00ff; padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0; }
         .skill-tag { background: #4b0082; color: #fff; padding: 5px 12px; border-radius: 15px; font-size: 0.9em; margin-right: 10px; }
     </style>
+    .cauldron-container {
+    text-align: center;
+    margin: 40px 0;
+}
+.cauldron {
+    width: 120px;
+    height: 100px;
+    background: #333; /* Dunkelgrauer Kessel */
+    border-radius: 50% 50% 45% 45%;
+    position: relative;
+    margin: 0 auto;
+    border-bottom: 5px solid #222;
+}
+.liquid {
+    width: 90px;
+    height: 20px;
+    background: linear-gradient(90deg, #ff00ff, #8a2be2); /* Pink-Violett-Batik */
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    box-shadow: 0 0 15px #ff00ff;
+}
+.bubble {
+    width: 10px;
+    height: 10px;
+    background: #8a2be2; /* Violette Blasen */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 80px;
+    opacity: 0;
+    animation: bubble-rise 2s infinite ease-in;
+}
+@keyframes bubble-rise {
+    0% { transform: translateY(0) scale(0.5); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-50px) scale(1.2); opacity: 0; }
+}
+/* Drei Blasen mit unterschiedlichem Timing */
+.b1 { left: 30px; animation-delay: 0.2s; }
+.b2 { left: 60px; animation-delay: 0.7s; }
+.b3 { left: 45px; animation-delay: 1.2s; }
+
 </head>
 <body>
     <div class="container">
@@ -28,6 +71,17 @@
 
                 <h2>Meine Motivation</h2>
         <p>Warum der Wechsel? Weil ich im Service gelernt habe, Prozesse zu optimieren und unter Druck Lösungen zu finden. Diese <span class="highlight">Hands-on-Mentalität</span> bringe ich jetzt in den Code. Ich will nicht nur Anwendungen nutzen, sondern verstehen, wie sie im Kern funktionieren und sie selber coden.</p>
+    <div class="cauldron-container">
+    <div style="position: relative; width: 120px; margin: 0 auto;">
+        <div class="bubble b1"></div>
+        <div class="bubble b2"></div>
+        <div class="bubble b3"></div>
+        <div class="cauldron">
+            <div class="liquid"></div>
+        </div>
+    </div>
+    <p>Lern-Status: <span class="highlight">Braue gerade C#-Logik...</span></p>
+</div>
 
         <h2>Mein Workflow</h2>
         <p>Struktur ist für mich alles. Mein aktueller Fokus liegt auf einer sauberen Lern-Routine:</p>
