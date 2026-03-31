@@ -55,47 +55,6 @@ h2 {
     display: inline-block;
     border-radius: 2px;
 }
-
-}
-.cauldron {
-    width: 120px;
-    height: 100px;
-    background: #333; /* Dunkelgrauer Kessel */
-    border-radius: 50% 50% 45% 45%;
-    position: relative;
-    margin: 0 auto;
-    border-bottom: 5px solid #222;
-}
-.liquid {
-    width: 90px;
-    height: 20px;
-    background: linear-gradient(90deg, #ff00ff, #8a2be2); /* Pink-Violett-Batik */
-    border-radius: 50%;
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    box-shadow: 0 0 15px #ff00ff;
-}
-.bubble {
-    width: 10px;
-    height: 10px;
-    background: #8a2be2; /* Violette Blasen */
-    border-radius: 50%;
-    position: absolute;
-    bottom: 80px;
-    opacity: 0;
-    animation: bubble-rise 2s infinite ease-in;
-}
-@keyframes bubble-rise {
-    0% { transform: translateY(0) scale(0.5); opacity: 0; }
-    50% { opacity: 0.8; }
-    100% { transform: translateY(-50px) scale(1.2); opacity: 0; }
-}
-/* Drei Blasen mit unterschiedlichem Timing */
-.b1 { left: 30px; animation-delay: 0.2s; }
-.b2 { left: 60px; animation-delay: 0.7s; }
-.b3 { left: 45px; animation-delay: 1.2s; }
-
     </style>
 
 </head>
